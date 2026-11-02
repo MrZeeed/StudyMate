@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>StudyMate UK – Support community for international students in the UK</title>
+<meta name="description" content="StudyMate UK is a friendly student support community helping international students with university applications, course choices, accommodation, student life and career preparation in the UK.">
+<meta name="theme-color" content="#0B1F4B">
+<meta property="og:type" content="website">
+<meta property="og:title" content="StudyMate UK – Your UK Student Journey Starts Here">
+<meta property="og:description" content="A friendly community supporting international students in the UK.">
+<meta property="og:locale" content="en_GB">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"StudyMate UK","description":"A student support community helping international students in the UK."}</script>
+<style>
+:root{
+  --bg:#F4F6FB; --surface:#fff; --ink:#142038; --muted:#4A5873; --line:#D8DEEC;
+  --navy:#0B1F4B; --hero:#0B1F4B; --on-navy:#fff; --on-navy-muted:#C9D4F0;
+  --btn:#C8202F; --btn-ink:#fff; --accent:#C8202F; --link:#0B3A9E;
+  --font:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --r:.75rem;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0A1226; --surface:#121E3D; --ink:#EAF0FF; --muted:#A9B6D3; --line:#26335A; --navy:#0A1636; --hero:#0F2250; --accent:#FF7A85; --link:#9DBBFF; color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0A1226; --surface:#121E3D; --ink:#EAF0FF; --muted:#A9B6D3; --line:#26335A; --navy:#0A1636; --hero:#0F2250; --accent:#FF7A85; --link:#9DBBFF; color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:1.0625rem;line-height:1.65}
+h1,h2,h3{line-height:1.2;margin:0 0 .6rem;letter-spacing:-.01em}
+p{margin:0 0 1rem}
+a{color:var(--link)}
+:focus-visible{outline:3px solid #F2B705;outline-offset:3px;border-radius:.25rem}
+main:focus{outline:none}
+.skip{position:absolute;left:-999px;top:0;background:#fff;color:#0B1F4B;padding:.75rem 1rem;z-index:20;font-weight:600}
+.skip:focus{left:.5rem;top:.5rem}
+.wrap{max-width:70rem;margin:0 auto;padding:0 1.25rem}
+.band{background:var(--navy);color:var(--on-navy)}
+header.top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem 1.5rem;padding:1rem 0}
+.logo{color:var(--on-navy);font-weight:800;font-size:1.35rem;text-decoration:none;letter-spacing:-.02em}
+.logo b{color:#FF6B77}
+nav.main{display:flex;gap:.25rem;flex-wrap:wrap}
+nav.main a{color:var(--on-navy);text-decoration:none;padding:.5rem .75rem;border-radius:.5rem;font-weight:500;min-height:2.75rem;display:inline-flex;align-items:center}
+nav.main a:hover{background:rgba(255,255,255,.12)}
+nav.main a[aria-current="page"]{background:#fff;color:#0B1F4B;font-weight:700}
+.hero{background:var(--hero);color:var(--on-navy)}
+.hero .wrap{padding-top:clamp(2.5rem,8vw,5.5rem);padding-bottom:clamp(2.5rem,8vw,5.5rem)}
+.hero h1{font-size:clamp(2.3rem,7vw,4.5rem);font-weight:800;letter-spacing:-.03em;max-width:15ch;margin-bottom:1.25rem}
+.hero p{font-size:clamp(1.1rem,2.4vw,1.3rem);color:var(--on-navy-muted);max-width:40rem}
+.btns{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.5rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:2.9rem;padding:.7rem 1.4rem;border-radius:999px;background:var(--btn);color:var(--btn-ink);font-weight:700;text-decoration:none;border:2px solid var(--btn);font-size:1rem;cursor:pointer;font-family:inherit}
+.btn:hover{filter:brightness(1.1)}
+.btn.alt{background:transparent;color:#fff;border-color:#fff}
+.btn.alt:hover{background:rgba(255,255,255,.12);filter:none}
+.view{display:none}
+.view.on{display:block}
+section.s{padding:clamp(2rem,6vw,3.5rem) 0}
+.eyebrow{color:var(--accent);font-weight:700;margin:0 0 .5rem}
+.title{font-size:clamp(1.7rem,4.5vw,2.5rem);font-weight:800}
+.lede{color:var(--muted);font-size:1.15rem;max-width:42rem}
+.pagehead{background:var(--hero);color:var(--on-navy)}
+.pagehead .wrap{padding-top:clamp(2rem,6vw,3.5rem);padding-bottom:clamp(2rem,6vw,3.5rem)}
+.pagehead h1{font-size:clamp(2rem,6vw,3.2rem);font-weight:800;margin-bottom:.75rem}
+.pagehead p{color:var(--on-navy-muted);font-size:1.15rem;max-width:42rem;margin:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15.5rem,1fr));gap:1.25rem}
+.card{background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:var(--r);padding:1.4rem}
+.card h3{font-size:1.2rem;color:var(--ink)}
+.card p{color:var(--muted);margin-bottom:1rem}
+.card a{font-weight:600}
+.topic{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:var(--r);padding:1.4rem;margin-bottom:1.25rem}
+.topic h2{font-size:1.4rem}
+.topic ul{margin:.5rem 0 0;padding-left:1.2rem;color:var(--muted)}
+.topic li{margin-bottom:.35rem}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start}
+.note{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--navy);border-radius:var(--r);padding:1.1rem 1.25rem}
+.note.warn{border-left-color:var(--accent)}
+.cta{background:var(--navy);color:var(--on-navy);border-radius:1rem;padding:clamp(1.5rem,5vw,2.5rem);margin-top:1rem}
+.cta h2{font-size:1.6rem}
+.cta p{color:var(--on-navy-muted);max-width:36rem}
+.faq{max-width:46rem}
+.faq details{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:0 1.25rem;margin-bottom:.75rem}
+.faq summary{cursor:pointer;font-weight:700;font-size:1.1rem;padding:1rem 0;list-style:none;display:flex;justify-content:space-between;gap:1rem;min-height:2.75rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--accent);font-size:1.5rem;line-height:1}
+.faq details[open] summary::after{content:"\2212"}
+.faq details p{color:var(--muted);padding-bottom:.25rem}
+form{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1.4rem}
+label{display:block;font-weight:600;margin-bottom:.3rem}
+input,select,textarea{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:2px solid var(--line);border-radius:.5rem;padding:.65rem .8rem;margin-bottom:1rem;min-height:2.75rem}
+textarea{min-height:7rem;resize:vertical}
+.badge{display:inline-block;background:var(--accent);color:#fff;font-weight:700;font-size:.85rem;padding:.2rem .6rem;border-radius:999px;margin-bottom:.75rem}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .badge{color:#0A1226}}
+#formmsg{margin:1rem 0 0;font-weight:600}
+footer{background:var(--navy);color:var(--on-navy-muted);margin-top:2rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem 2rem;padding-top:1.75rem;padding-bottom:1.75rem}
+footer nav{display:flex;gap:.25rem 1.25rem;flex-wrap:wrap}
+footer a{color:var(--on-navy);min-height:2.75rem;display:inline-flex;align-items:center}
+@media (max-width:760px){.two{grid-template-columns:1fr;gap:1.25rem}.btns .btn{flex:1 1 100%}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<div class="band">
+  <div class="wrap">
+    <header class="top">
+      <a class="logo" href="#home" aria-label="StudyMate UK home">StudyMate <b>UK</b></a>
+      <nav class="main" aria-label="Main">
+        <a href="#home">Home</a><a href="#about">About Us</a><a href="#support">Student Support</a><a href="#faqs">FAQs</a><a href="#contact">Contact</a>
+      </nav>
+    </header>
+  </div>
+</div>
+
+<main id="main" tabindex="-1">
+
+<div class="view" id="v-home">
+  <div class="hero"><div class="wrap">
+    <h1>Your UK Student Journey Starts Here.</h1>
+    <p>StudyMate UK is a friendly community for international students. Whether you are choosing a course, finding a home or planning your career, you will find clear, practical support and people who understand.</p>
+    <div class="btns">
+      <a class="btn join" href="#contact">Join Our Community</a>
+      <a class="btn alt" href="#support">Explore student support</a>
+    </div>
+  </div></div>
+
+  <section class="s"><div class="wrap">
+    <p class="eyebrow">How we can help</p>
+    <h2 class="title">Support for every step</h2>
+    <p class="lede">Moving to the UK to study brings a lot of questions. Start with the topic that matters most to you right now.</p>
+    <div class="grid" style="margin-top:1.5rem">
+      <article class="card"><h3>University applications</h3><p>Understand how applying works and what to prepare before you submit.</p><a href="#support">View support topics</a></article>
+      <article class="card"><h3>Course selection</h3><p>Compare subjects and course types so you choose with confidence.</p><a href="#support">View support topics</a></article>
+      <article class="card"><h3>Accommodation</h3><p>Learn about your housing options and what to check before you sign.</p><a href="#support">View support topics</a></article>
+      <article class="card"><h3>Student life</h3><p>Settle in, make friends and feel at home in your new city.</p><a href="#support">View support topics</a></article>
+      <article class="card"><h3>Career preparation</h3><p>Build your CV and skills, and start planning life after your studies.</p><a href="#support">View support topics</a></article>
+    </div>
+  </div></section>
+
+  <section class="s" style="padding-top:0"><div class="wrap">
+    <div class="cta">
+      <h2>You do not have to figure it out alone</h2>
+      <p>Join StudyMate UK to connect with other international students and get friendly, practical guidance.</p>
+      <a class="btn join" href="#contact">Join Our Community</a>
+    </div>
+  </div></section>
+</div>
+
+<div class="view" id="v-about">
+  <div class="pagehead"><div class="wrap"><h1>About Us</h1><p>StudyMate UK is a student support community for international students in the UK.</p></div></div>
+  <section class="s"><div class="wrap two">
+    <div>
+      <h2 class="title">Why we exist</h2>
+      <p>Studying in a new country is exciting, and it can also feel overwhelming. There is a lot to learn, and it is not always easy to know where to start or who to ask.</p>
+      <p>StudyMate UK brings international students together so that nobody has to work it all out alone. We share clear information, practical tips and friendly encouragement.</p>
+    </div>
+    <div>
+      <h2 class="title">Who it is for</h2>
+      <p>Our community is for international students who are planning to study in the UK, have just arrived, or are already part of university life.</p>
+      <div class="note warn"><strong>Please note:</strong> StudyMate UK does not give visa, immigration or legal advice. For those questions, speak to your university’s international office or use official sources.</div>
+    </div>
+  </div></section>
+  <section class="s" style="padding-top:0"><div class="wrap">
+    <h2 class="title">What we care about</h2>
+    <div class="grid" style="margin-top:1rem">
+      <div class="card"><h3>Welcoming</h3><p>Every question is a good question. You are welcome here wherever you are from.</p></div>
+      <div class="card"><h3>Clear</h3><p>We explain things in plain, simple English, without jargon.</p></div>
+      <div class="card"><h3>Practical</h3><p>We focus on useful next steps you can take today.</p></div>
+    </div>
+  </div></section>
+</div>
+
+<div class="view" id="v-support">
+  <div class="pagehead"><div class="wrap"><h1>Student Support</h1><p>Five areas where StudyMate UK can help you on your UK student journey.</p></div></div>
+  <section class="s"><div class="wrap">
+    <article class="topic"><h2>University applications</h2>
+      <p>Applying can feel complicated. We help you understand the steps and get organised.</p>
+      <ul><li>Understand how UK applications work</li><li>Prepare your documents and personal statement</li><li>Know what to ask universities before you apply</li></ul></article>
+    <article class="topic"><h2>Course selection</h2>
+      <p>The right course is about more than the title. Think about what you enjoy and where you want to go next.</p>
+      <ul><li>Compare subjects, course types and teaching styles</li><li>Check entry requirements carefully</li><li>Talk to students who have taken similar courses</li></ul></article>
+    <article class="topic"><h2>Accommodation</h2>
+      <p>A comfortable home makes studying easier. Take your time and check the details.</p>
+      <ul><li>Learn about university housing and private renting</li><li>Read contracts carefully before you sign</li><li>Plan your budget for rent and bills</li></ul></article>
+    <article class="topic"><h2>Student life</h2>
+      <p>Settling in takes time, and it is normal to feel unsure at first.</p>
+      <ul><li>Meet people through societies and community events</li><li>Find your way around your new city</li><li>Look after your wellbeing and ask for help early</li></ul></article>
+    <article class="topic"><h2>Career preparation</h2>
+      <p>Start thinking about your future early so you can make the most of your time at university.</p>
+      <ul><li>Build a strong CV and develop your skills</li><li>Explore internships and work experience</li><li>Use your university careers service</li></ul></article>
+    <div class="note"><strong>Official sources:</strong> For applications, see <a href="https://www.ucas.com" target="_blank" rel="noopener noreferrer">UCAS</a>. For visa and student rules, see <a href="https://www.gov.uk/student-visa" target="_blank" rel="noopener noreferrer">GOV.UK student visa guidance</a>. For international student advice, see <a href="https://www.ukcisa.org.uk" target="_blank" rel="noopener noreferrer">UKCISA</a>. Links open in a new tab.</div>
+    <div class="cta"><h2>Want to talk it through?</h2><p>Join our community to ask questions and learn from other international students.</p><a class="btn join" href="#contact">Join Our Community</a></div>
+  </div></section>
+</div>
+
+<div class="view" id="v-faqs">
+  <div class="pagehead"><div class="wrap"><h1>FAQs</h1><p>Answers to common questions about StudyMate UK.</p></div></div>
+  <section class="s"><div class="wrap"><div class="faq">
+    <details><summary>What is StudyMate UK?</summary><p>StudyMate UK is a student support community that helps international students with their journey to and through UK higher education.</p></details>
+    <details><summary>Who can join?</summary><p>International students who are planning to study in the UK, have just arrived, or are already studying here.</p></details>
+    <details><summary>What topics can you help with?</summary><p>University applications, course selection, accommodation, student life and career preparation.</p></details>
+    <details><summary>Do you give visa or legal advice?</summary><p>No. For visa, immigration or legal questions, please contact your university’s international office or use official sources such as GOV.UK and UKCISA.</p></details>
+    <details><summary>How do I join?</summary><p>Select “Join Our Community” on any page. We are currently adding our community link and contact details to this site.</p></details>
+  </div></div></section>
+</div>
+
+<div class="view" id="v-contact">
+  <div class="pagehead"><div class="wrap"><h1>Contact</h1><p>Join StudyMate UK or get in touch with a question.</p></div></div>
+  <section class="s"><div class="wrap two">
+    <div>
+      <h2 class="title">Join Our Community</h2>
+      <div class="note warn" id="community">
+        <strong>Community link coming soon.</strong>
+        <p style="margin:.5rem 0 0">We are adding our community link and contact details to this page. Please check back soon.</p>
+      </div>
+      <div class="btns"><a class="btn join" id="joinmain" href="#contact" style="background:var(--btn)">Join Our Community</a></div>
+    </div>
+    <form id="demo" novalidate aria-labelledby="formtitle">
+      <span class="badge">Demonstration form</span>
+      <h2 id="formtitle" style="font-size:1.3rem">Send us a message</h2>
+      <p class="lede" style="font-size:1rem">This is a demonstration form. It does not send enquiries yet.</p>
+      <label for="n">Your name</label><input id="n" name="name" autocomplete="name">
+      <label for="e">Email address</label><input id="e" name="email" type="email" autocomplete="email">
+      <label for="t">Topic</label>
+      <select id="t" name="topic"><option>University applications</option><option>Course selection</option><option>Accommodation</option><option>Student life</option><option>Career preparation</option><option>Something else</option></select>
+      <label for="m">Message</label><textarea id="m" name="message"></textarea>
+      <button class="btn" type="submit">Preview send (demo only)</button>
+      <p id="formmsg" role="status" aria-live="polite"></p>
+    </form>
+  </div></section>
+</div>
+
+</main>
+
+<footer><div class="wrap">
+  <div><strong style="color:#fff">StudyMate UK</strong><br>Supporting international students in the UK.<br>© 2026 StudyMate UK</div>
+  <nav aria-label="Footer"><a href="#home">Home</a><a href="#about">About Us</a><a href="#support">Student Support</a><a href="#faqs">FAQs</a><a href="#contact">Contact</a></nav>
+</div></footer>
+
+<script>
+(function(){
+  /* Add your real community link here, e.g. "https://chat.whatsapp.com/..." */
+  var COMMUNITY_URL="";
+  var names=["home","about","support","faqs","contact"];
+  var titles={home:"StudyMate UK – Support community for international students in the UK",about:"About Us – StudyMate UK",support:"Student Support – StudyMate UK",faqs:"FAQs – StudyMate UK",contact:"Contact – StudyMate UK"};
+  var first=true;
+  if(COMMUNITY_URL){
+    document.querySelectorAll("a.join").forEach(function(a){a.href=COMMUNITY_URL;a.target="_blank";a.rel="noopener noreferrer"});
+    var c=document.getElementById("community");if(c)c.hidden=true;
+  }
+  function show(){
+    var h=(location.hash||"").replace("#","");
+    if(names.indexOf(h)<0)h="home";
+    names.forEach(function(n){document.getElementById("v-"+n).classList.toggle("on",n===h)});
+    document.querySelectorAll("nav.main a").forEach(function(a){
+      if(a.getAttribute("href")==="#"+h)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");
+    });
+    document.title=titles[h];
+    if(!first){window.scrollTo(0,0);document.getElementById("main").focus({preventScroll:true})}
+    first=false;
+  }
+  window.addEventListener("hashchange",show);
+  show();
+  document.getElementById("demo").addEventListener("submit",function(e){
+    e.preventDefault();
+    document.getElementById("formmsg").textContent="This is a demonstration form, so your message has not been sent. Our contact details are coming soon.";
+  });
+})();
+</script>
+</body>
+</html>
