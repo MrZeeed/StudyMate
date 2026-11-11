@@ -217,12 +217,12 @@ footer a{color:var(--on-navy);min-height:2.75rem;display:inline-flex;align-items
     <form id="demo" novalidate aria-labelledby="formtitle">
       <span class="badge">Demonstration form</span>
       <h2 id="formtitle" style="font-size:1.3rem">Send us a message</h2>
-      <p class="lede" style="font-size:1rem">This is a demonstration form. It does not send enquiries yet.</p>
-      <label for="n">Your name</label><input id="n" name="name" autocomplete="name">
-      <label for="e">Email address</label><input id="e" name="email" type="email" autocomplete="email">
+      <p class="lede" style="font-size:1rem">This is a demonstration form. It does not send enquiries yet. Name, email and message are required to preview it.</p>
+      <label for="n">Your name</label><input id="n" name="name" autocomplete="name" required maxlength="120">
+      <label for="e">Email address</label><input id="e" name="email" type="email" autocomplete="email" required maxlength="254">
       <label for="t">Topic</label>
       <select id="t" name="topic"><option>University applications</option><option>Course selection</option><option>Accommodation</option><option>Student life</option><option>Career preparation</option><option>Something else</option></select>
-      <label for="m">Message</label><textarea id="m" name="message"></textarea>
+      <label for="m">Message</label><textarea id="m" name="message" required maxlength="3000"></textarea>
       <button class="btn" type="submit">Preview send (demo only)</button>
       <p id="formmsg" role="status" aria-live="polite"></p>
     </form>
@@ -260,8 +260,21 @@ footer a{color:var(--on-navy);min-height:2.75rem;display:inline-flex;align-items
   }
   window.addEventListener("hashchange",show);
   show();
-  document.getElementById("demo").addEventListener("submit",function(e){
+  var demo = document.getElementById("demo");
+  demo.addEventListener("input", function(event){
+    if (event.target.matches("input, textarea")) event.target.setCustomValidity("");
+    document.getElementById("formmsg").textContent = "";
+  });
+  demo.addEventListener("submit",function(e){
     e.preventDefault();
+    ["n", "m"].forEach(function(id){
+      var field = document.getElementById(id);
+      field.setCustomValidity(field.value.trim() ? "" : "Please complete this field.");
+    });
+    if (!demo.reportValidity()) {
+      document.getElementById("formmsg").textContent = "Please complete your name, a valid email address and a message before previewing.";
+      return;
+    }
     document.getElementById("formmsg").textContent="This is a demonstration form, so your message has not been sent. Our contact details are coming soon.";
   });
 })();
